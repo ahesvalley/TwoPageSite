@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<div class="alert alert-warning mt-2">
+    {% if user.is_authenticated %}
+    <h3>Добро пожаловать, {{user.username}}</h3>
+    {% else %}
+    <h3>Вы не авторизированы, вам необходимо <a href="{% url 'login'%}?next={{request.path}}">войти</a></h3>
+    {% endif %}
+
+{% endblock %}

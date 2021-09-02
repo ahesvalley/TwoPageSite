@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <h1>Добро пожаловать, {{ profile.first_name }}!</h1>
+    <p>Вы успешно зарегистрировались на TwoPageSite, тепеь вы можете <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'login'%}">Войти</a></p>
+{% endblock %}

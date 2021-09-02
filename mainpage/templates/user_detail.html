@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+</div>
+{% if user.is_authenticated %}
+    <h1>{{ user.first_name }}</h1>
+      <p><strong>Родился:</strong> {{ user.profile.birthday }}</p>
+      <p><strong>login:</strong> {{ user.username }}</p>
+      <p><strong>Почта:</strong> {{ user.email }}</p>
+      <p><strong>О себе:</strong> {{ user.profile.about }}</p>
+{% endif %}
+  </div>
+
+
+{% endblock %}
